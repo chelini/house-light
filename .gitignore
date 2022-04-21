@@ -1,0 +1,9 @@
+.CMakeLists.txt.swp
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+donotpushusername.h
+external/build-hueplusplus/
+external/install-hueplusplus/
+houselight
