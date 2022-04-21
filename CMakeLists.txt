@@ -33,11 +33,9 @@ add_executable(houselight
 
 add_dependencies(houselight hueplusplus)
 
-link_directories(houselight ${hueplusplus_LIBPATH})
-target_include_directories(houselight PUBLIC ${CMAKE_SOURCE_DIR})
+target_include_directories(houselight PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(houselight PUBLIC ${hueplusplus_INCLUDE})
-target_link_libraries(houselight PUBLIC ${hueplusplus_LIB})
 
-#target_link_libraries(main houselight)
-
-#add_subdirectory(test)
+set(hueplusplus_LIB "libhueplusplusshared.so")
+target_link_directories(houselight PUBLIC ${hueplusplus_LIBPATH})
+target_link_libraries(houselight ${hueplusplus_LIB})
